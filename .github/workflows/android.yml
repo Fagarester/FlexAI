@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Build Android APK (Amper)
 
 on:
@@ -39,5 +40,43 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: app/build/outputs/apk/release/*.apk # Amper обычно складывает файлы в эту папку
+=======
+name: Build Android APK (Manual Release)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Завантажуємо твій код
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # 2. Встановлюємо Java
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '17'
+
+    # 3. Надаємо права на виконання gradlew
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    # 4. Збираємо APK через Gradle
+    - name: Build Android Release
+      run: ./gradlew assembleRelease
+
+    # 5. Прикріплюємо готовий APK-файл до релізу v1.0.0
+    - name: Attach APK to GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: v1.0.0
+        files: app/build/outputs/apk/release/*.apk
+>>>>>>> branch 'main' of https://github.com/Fagarester/FlexAI.git
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
