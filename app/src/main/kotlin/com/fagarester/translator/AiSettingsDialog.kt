@@ -50,7 +50,7 @@ fun AiSettingsDialog(settingsStore: SettingsStore, modelPath: String, onDismiss:
                     }
                 }
 
-                HorizontalDivider()
+                Divider()
 
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                     Text("Лимит токенов", fontSize = 14.sp)
@@ -62,7 +62,7 @@ fun AiSettingsDialog(settingsStore: SettingsStore, modelPath: String, onDismiss:
                 )
                 Slider(value = maxTokens, onValueChange = { maxTokens = it }, valueRange = 128f..2048f, steps = 14)
 
-                HorizontalDivider()
+                Divider()
 
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                     Text("Top-K", fontSize = 14.sp)
@@ -82,7 +82,7 @@ fun AiSettingsDialog(settingsStore: SettingsStore, modelPath: String, onDismiss:
                 }
                 Slider(value = temperature, onValueChange = { temperature = it }, valueRange = 0f..2f)
 
-                HorizontalDivider()
+                Divider()
 
                 Text("Системный промпт", fontSize = 13.sp, fontWeight = FontWeight.Medium)
                 OutlinedTextField(
@@ -93,7 +93,7 @@ fun AiSettingsDialog(settingsStore: SettingsStore, modelPath: String, onDismiss:
                     minLines = 3
                 )
 
-                HorizontalDivider()
+                Divider()
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
