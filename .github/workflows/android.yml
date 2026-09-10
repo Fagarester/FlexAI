@@ -9,28 +9,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Скачиваем твой код
+    # 1. Завантажуємо твій код
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    # 2. Устанавливаем Java
+    # 2. Встановлюємо Java
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
         java-version: '17'
 
-    # 3. Настраиваем Amper официальным и надежным способом
-    - name: Setup Amper Build System
-      uses: jetbrains/setup-amper@v1
-      with:
-        amper-version: '0.5.0'
+    # 3. Завантажуємо оригінальний скрипт-обгортку Amper з офіційного репозиторію JetBrains
+    - name: Download Official Amper Script
+      run: |
+        curl -L https://githubusercontent.com -o amper
+        chmod +x amper
 
-    # 4. Запускаем сборку APK через установленный Amper
+    # 4. Запускаємо збірку APK через офіційний скрипт
     - name: Build Android Release
-      run: amper build :app
+      run: ./amper build :app
 
-    # 5. Прикрепляем готовый APK-файл к релизу v1.0.0
+    # 5. Прикріплюємо готовий APK-файл до релізу v1.0.0
     - name: Attach APK to GitHub Release
       uses: softprops/action-gh-release@v2
       with:
