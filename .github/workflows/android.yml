@@ -9,24 +9,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # 1. Завантажуємо твій код
     - name: Checkout Code
       uses: actions/checkout@v4
 
+    # 2. Встановлюємо Java
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
         java-version: '17'
 
-    - name: Download Kotlin Toolchain Wrapper
-      run: |
-        curl -fsSL https://raw.githubusercontent.com/JetBrains/kotlin-toolchain/main/kotlin -o kotlin
-        chmod +x kotlin
+    # 3. Робимо скрипт виконуваним
+    - name: Make build script executable
+      run: chmod +x build.sh
 
-    # ✅ ПРАВИЛЬНО - без :app
+    # 4. Запускаємо збірку через власний скрипт
     - name: Build Android Release
-      run: ./kotlin build
+      run: ./build.sh
 
+    # 5. Прикріплюємо готовий APK-файл до релізу v1.0.0
     - name: Attach APK to GitHub Release
       uses: softprops/action-gh-release@v2
       with:
