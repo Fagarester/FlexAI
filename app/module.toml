@@ -1,0 +1,47 @@
+version = 2
+
+[module]
+type = "android-app"
+name = "app"
+languageLevel = "JAVA_17"
+output = "build/classes"
+
+[sourceSets.debug]
+scope = "IMPLEMENTATION"
+assets = ["src/debug/assets"]
+java = ["src/debug/java", "src/debug/kotlin"]
+jniLibs = ["src/debug/jniLibs"]
+res = ["src/debug/res"]
+resources = ["src/debug/resources"]
+
+[sourceSets.main]
+scope = "IMPLEMENTATION"
+assets = ["src/main/assets"]
+java = ["src/main/java", "src/main/kotlin"]
+jniLibs = ["src/main/jniLibs"]
+res = ["src/main/res"]
+resources = ["src/main/resources"]
+
+[sourceSets.release]
+scope = "IMPLEMENTATION"
+assets = ["src/release/assets"]
+java = ["src/release/java", "src/release/kotlin"]
+jniLibs = ["src/release/jniLibs"]
+res = ["src/release/res"]
+resources = ["src/release/resources"]
+
+[dependencies]
+implementation = ["org.jetbrains.kotlin:kotlin-stdlib:2.2.21", "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0", "com.squareup.okhttp3:okhttp:4.12.0", "androidx.activity:activity-compose:1.7.2", "androidx.compose.material3:material3:1.1.1", "com.google.ai.edge.litertlm:litertlm-android:0.14.0", "kotlin-stdlib", "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"]
+
+[android]
+namespace = "com.fagarester.translator"
+compileSdk = 34
+minSdk = 26
+targetSdk = 34
+manifest = "src/main/AndroidManifest.xml"
+versionCode = 1
+versionName = "1.0"
+isApplication = true
+buildTypes = [{ name = "debug", debuggable = true, minifyEnabled = false, shrinkResources = false }, { name = "release", debuggable = false, minifyEnabled = false, shrinkResources = false, proguardFiles = ["proguard-android-optimize.txt", "proguard-rules.pro"] }]
+compose = true
+aapt_flags = ["--no-version-vectors", "--allow-reserved-package-id"]

@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Фон: тёмный космический градиент -->
+    <path android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0"
+                android:startY="0"
+                android:endX="108"
+                android:endY="108"
+                android:startColor="#0D1B2A"
+                android:endColor="#1B263B" />
+        </aapt:attr>
+    </path>
+
+    <!-- Крупные звёзды -->
+    <path android:pathData="M14,18m-1.1,0a1.1,1.1 0,1 1,2.2 0a1.1,1.1 0,1 1,-2.2 0" android:fillColor="#FFFFFF" android:fillAlpha="0.9"/>
+    <path android:pathData="M92,14m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0" android:fillColor="#FFFFFF" android:fillAlpha="0.85"/>
+    <path android:pathData="M96,88m-1.2,0a1.2,1.2 0,1 1,2.4 0a1.2,1.2 0,1 1,-2.4 0" android:fillColor="#FFFFFF" android:fillAlpha="0.9"/>
+    <path android:pathData="M10,94m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0" android:fillColor="#FFFFFF" android:fillAlpha="0.8"/>
+    <path android:pathData="M18,70m-0.9,0a0.9,0.9 0,1 1,1.8 0a0.9,0.9 0,1 1,-1.8 0" android:fillColor="#FFFFFF" android:fillAlpha="0.75"/>
+
+    <!-- Средние звёзды -->
+    <path android:pathData="M30,10m-0.7,0a0.7,0.7 0,1 1,1.4 0a0.7,0.7 0,1 1,-1.4 0" android:fillColor="#FFFFFF" android:fillAlpha="0.7"/>
+    <path android:pathData="M78,22m-0.7,0a0.7,0.7 0,1 1,1.4 0a0.7,0.7 0,1 1,-1.4 0" android:fillColor="#FFFFFF" android:fillAlpha="0.65"/>
+    <path android:pathData="M88,60m-0.7,0a0.7,0.7 0,1 1,1.4 0a0.7,0.7 0,1 1,-1.4 0" android:fillColor="#FFFFFF" android:fillAlpha="0.7"/>
+    <path android:pathData="M22,50m-0.6,0a0.6,0.6 0,1 1,1.2 0a0.6,0.6 0,1 1,-1.2 0" android:fillColor="#FFFFFF" android:fillAlpha="0.6"/>
+    <path android:pathData="M60,96m-0.7,0a0.7,0.7 0,1 1,1.4 0a0.7,0.7 0,1 1,-1.4 0" android:fillColor="#FFFFFF" android:fillAlpha="0.7"/>
+    <path android:pathData="M8,30m-0.6,0a0.6,0.6 0,1 1,1.2 0a0.6,0.6 0,1 1,-1.2 0" android:fillColor="#FFFFFF" android:fillAlpha="0.6"/>
+
+    <!-- Мелкие звёзды (пыль) -->
+    <path android:pathData="M44,8m-0.4,0a0.4,0.4 0,1 1,0.8 0a0.4,0.4 0,1 1,-0.8 0" android:fillColor="#FFFFFF" android:fillAlpha="0.5"/>
+    <path android:pathData="M100,40m-0.4,0a0.4,0.4 0,1 1,0.8 0a0.4,0.4 0,1 1,-0.8 0" android:fillColor="#FFFFFF" android:fillAlpha="0.5"/>
+    <path android:pathData="M6,60m-0.4,0a0.4,0.4 0,1 1,0.8 0a0.4,0.4 0,1 1,-0.8 0" android:fillColor="#FFFFFF" android:fillAlpha="0.45"/>
+    <path android:pathData="M70,6m-0.4,0a0.4,0.4 0,1 1,0.8 0a0.4,0.4 0,1 1,-0.8 0" android:fillColor="#FFFFFF" android:fillAlpha="0.5"/>
+    <path android:pathData="M36,100m-0.4,0a0.4,0.4 0,1 1,0.8 0a0.4,0.4 0,1 1,-0.8 0" android:fillColor="#FFFFFF" android:fillAlpha="0.45"/>
+    <path android:pathData="M100,74m-0.4,0a0.4,0.4 0,1 1,0.8 0a0.4,0.4 0,1 1,-0.8 0" android:fillColor="#FFFFFF" android:fillAlpha="0.5"/>
+    <path android:pathData="M50,4m-0.4,0a0.4,0.4 0,1 1,0.8 0a0.4,0.4 0,1 1,-0.8 0" android:fillColor="#FFFFFF" android:fillAlpha="0.4"/>
+
+</vector>
