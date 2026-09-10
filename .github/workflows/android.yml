@@ -1,51 +1,44 @@
-name: Build Android APK (Manual Release) 
+name: Build Android APK (Manual Release)
 
-### Сценарий запускается ТОЛЬКО вручную по кнопке на сайте
-
+# Сценарий запускается ТОЛЬКО вручную по кнопке на сайте
 on:
-workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
-build:
-name: Build APK
-runs-on: ubuntu-latest 
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
 
-steps:
-### 1. Скачиваем твой код
+    steps:
+    # 1. Скачиваем твой код
+    - name: Checkout Code
+      uses: actions/checkout@v4
 
-* name: Checkout Code
-uses: actions/checkout@v4
+    # 2. Устанавливаем Java (необходима для работы Kotlin)
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '17'
 
-### 2. Устанавливаем Java (необходима для работы Kotlin)
+    # 3. Скачиваем инструмент Amper на виртуальную машину GitHub
+    - name: Download Amper
+      run: |
+        curl -L https://jetbrains.team -o amper.jar
+        echo '#!/bin/bash' > amper
+        echo 'java -jar "'$(pwd)'/amper.jar" "$@"' >> amper
+        chmod +x amper
 
-* name: Set up JDK 17
-uses: actions/setup-java@v4
-with:
-distribution: 'zulu'
-java-version: '17'
+    # 4. Запускаем сборку APK через Amper
+    - name: Build Android Release
+      run: ./amper build :app
 
-### 3. Скачиваем инструмент Amper на виртуальную машину GitHub
-
-* name: Download Amper
-run: |
-curl -L https://packages.jetbrains.team/maven/p/amper/amper/org/jetbrains/amper/cli/0.5.0/cli-0.5.0-wrapper.jar -o amper.jar
-echo '#!/bin/bash' > amper
-echo 'java -jar "'(pwd)'/amper.jar" "@"' >> amper
-chmod +x amper
-
-### 4. Запускаем сборку APK через Amper
-
-* name: Build Android Release
-run: ./amper build :app
-
-### 5. Автоматически находим релиз v1.0.0 и прикрепляем туда готовый APK-файл
-
-* name: Attach APK to GitHub Release
-uses: softprops/action-gh-release@v2
-with:
-tag_name: v1.0.0
-files: app/build/outputs/apk/release/*.apk
-env:
-GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}      env:
+    # 5. Автоматически находим релиз v1.0.0 и прикрепляем туда готовый APK-файл
+    - name: Attach APK to GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: v1.0.0
+        files: app/build/outputs/apk/release/*.apk
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
