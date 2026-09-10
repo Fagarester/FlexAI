@@ -33,6 +33,10 @@ android {
     buildFeatures {
         compose = true
     }
+
+    packagingOptions {
+        pickFirst("lib/arm64-v8a/liblitertlm_jni.so")
+    }
 }
 
 kotlin {
@@ -42,7 +46,6 @@ kotlin {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("androidx.activity:activity-compose:1.9.0")
