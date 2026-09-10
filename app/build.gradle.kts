@@ -46,6 +46,9 @@ kotlin {
 }
 
 dependencies {
+    // Force compatible kotlin-stdlib version to prevent conflicts from transitive dependencies
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.24")
+    
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("androidx.activity:activity-compose:1.9.0")
