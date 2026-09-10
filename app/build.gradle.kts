@@ -2,8 +2,8 @@
 
 plugins {
     id("com.android.application") version "8.7.0"
-    id("org.jetbrains.kotlin.android") version "2.1.0"
-    id("org.jetbrains.kotlin.plugin.compose") version "2.1.0"
+    id("org.jetbrains.kotlin.android") version "2.2.21"
+    id("org.jetbrains.kotlin.plugin.compose") version "2.2.21"
 }
 
 android {
@@ -46,15 +46,15 @@ kotlin {
 }
 
 dependencies {
-    // Force compatible kotlin-stdlib version to prevent conflicts from transitive dependencies
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.24")
+    // Force compatible kotlin-stdlib version to match Kotlin compiler 2.2.21
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.2.21")
     
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation("androidx.activity:activity-compose:1.9.0")
+    implementation("androidx.activity:activity-compose:1.7.2")
     implementation("androidx.compose.material3:material3:1.1.1")
-    implementation("com.google.ai.edge.litertlm:litertlm-android:0.17.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
+    implementation("com.google.ai.edge.litertlm:litertlm-android:0.14.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.core:core-ktx:1.13.1")
 }
