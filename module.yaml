@@ -1,0 +1,38 @@
+product: android/app
+
+dependencies:
+  - org.jetbrains.kotlin:kotlin-stdlib:2.2.21
+  - org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0
+  - com.squareup.okhttp3:okhttp:4.12.0
+  - androidx.activity:activity-compose:1.7.2
+  - androidx.compose.material3:material3:1.1.1
+  - com.google.ai.edge.litertlm:litertlm-android:0.14.0
+  - androidx.lifecycle:lifecycle-runtime-ktx:2.7.0
+
+settings:
+  android:
+    namespace: com.fagarester.translator
+    compileSdk: 34
+    minSdk: 26
+    targetSdk: 34
+    versionCode: 1
+    versionName: "1.0"
+    compose: true
+  
+  kotlin:
+    version: 2.2.21
+    jvmTarget: "17"
+
+  androidBuild:
+    buildTypes:
+      debug:
+        debuggable: true
+        minifyEnabled: false
+        shrinkResources: false
+      release:
+        debuggable: false
+        minifyEnabled: false
+        shrinkResources: false
+        proguardFiles:
+          - proguard-android-optimize.txt
+          - proguard-rules.pro
