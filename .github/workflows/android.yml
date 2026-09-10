@@ -20,13 +20,13 @@ jobs:
         distribution: 'zulu'
         java-version: '17'
 
-    # 3. Робимо скрипт виконуваним
-    - name: Make build script executable
-      run: chmod +x build.sh
+    # 3. Надаємо права на виконання gradlew
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
 
-    # 4. Запускаємо збірку через власний скрипт
+    # 4. Збираємо APK через Gradle
     - name: Build Android Release
-      run: ./build.sh
+      run: ./gradlew assembleRelease
 
     # 5. Прикріплюємо готовий APK-файл до релізу v1.0.0
     - name: Attach APK to GitHub Release
