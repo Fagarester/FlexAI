@@ -31,7 +31,7 @@ res = ["src/release/res"]
 resources = ["src/release/resources"]
 
 [dependencies]
-implementation = ["org.jetbrains.kotlin:kotlin-stdlib:2.2.21", "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0", "com.squareup.okhttp3:okhttp:4.12.0", "androidx.activity:activity-compose:1.7.2", "androidx.compose.material3:material3:1.1.1", "com.google.ai.edge.litertlm:litertlm-android:0.14.0", "kotlin-stdlib", "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"]
+implementation = ["org.jetbrains.kotlin:kotlin-stdlib:2.2.21", "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0", "com.squareup.okhttp3:okhttp:4.12.0", "androidx.activity:activity-compose:1.7.2", "androidx.compose.material3:material3:1.1.1", "com.google.ai.edge.litertlm:litertlm-android:0.17.0", "kotlin-stdlib", "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"]
 
 [android]
 namespace = "com.fagarester.translator"
