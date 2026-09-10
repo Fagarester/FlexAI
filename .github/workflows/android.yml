@@ -20,7 +20,7 @@ jobs:
         distribution: 'zulu'
         java-version: '17'
 
-    # 3. Завантажуємо оригінальний скрипт-обгортку Amper з офіційного репозиторію JetBrains
+    # 3. Завантажуємо оригінальний скрипт-обгортку Amper з ПРАВИЛЬНОЇ адреси
     - name: Download Official Amper Script
       run: |
         curl -L https://githubusercontent.com -o amper
