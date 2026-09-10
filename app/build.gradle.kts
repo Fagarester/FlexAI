@@ -11,8 +11,11 @@ android {
     compileSdk = 34
 
     defaultConfig {
+        applicationId = "com.fagarester.translator"
         minSdk = 26
         targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
     }
 
     buildTypes {
@@ -46,4 +49,6 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.1.1")
     implementation("com.google.ai.edge.litertlm:litertlm-android:0.17.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.core:core-ktx:1.12.0")
 }
