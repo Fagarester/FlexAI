@@ -20,15 +20,15 @@ jobs:
         distribution: 'zulu'
         java-version: '17'
 
-    # 3. Завантажуємо оригінальний скрипт-обгортку Amper з ПРАВИЛЬНОЇ адреси
-    - name: Download Official Amper Script
+    # 3. Завантажуємо wrapper скрипт Kotlin Toolchain (замість Amper)
+    - name: Download Kotlin Toolchain Wrapper
       run: |
-        curl -L https://githubusercontent.com -o amper
-        chmod +x amper
+        curl -fsSL https://raw.githubusercontent.com/JetBrains/kotlin-toolchain/main/kotlin -o kotlin
+        chmod +x kotlin
 
-    # 4. Запускаємо збірку APK через офіційний скрипт
+    # 4. Запускаємо збірку APK через Kotlin Toolchain
     - name: Build Android Release
-      run: ./amper build :app
+      run: ./kotlin build :app
 
     # 5. Прикріплюємо готовий APK-файл до релізу v1.0.0
     - name: Attach APK to GitHub Release
@@ -38,4 +38,3 @@ jobs:
         files: app/build/outputs/apk/release/*.apk
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
