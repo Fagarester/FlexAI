@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Атмосферное свечение -->
+    <path
+        android:pathData="M54,18
+                          C34.1,18 18,34.1 18,54
+                          C18,73.9 34.1,90 54,90
+                          C73.9,90 90,73.9 90,54
+                          C90,34.1 73.9,18 54,18Z"
+        android:fillColor="#42A5F5"
+        android:fillAlpha="0.12"/>
+
+    <!-- Внешнее мягкое свечение -->
+    <path
+        android:pathData="M54,20
+                          C35.2,20 20,35.2 20,54
+                          C20,72.8 35.2,88 54,88
+                          C72.8,88 88,72.8 88,54
+                          C88,35.2 72.8,20 54,20Z"
+        android:fillColor="#81D4FA"
+        android:fillAlpha="0.08"/>
+
+    <!-- Основная сфера -->
+    <path
+        android:pathData="M54,24
+                          C37.43,24 24,37.43 24,54
+                          C24,70.57 37.43,84 54,84
+                          C70.57,84 84,70.57 84,54
+                          C84,37.43 70.57,24 54,24Z">
+
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="40"
+                android:centerY="36"
+                android:gradientRadius="60">
+
+                <item
+                    android:offset="0"
+                    android:color="#AEE8FF"/>
+
+                <item
+                    android:offset="0.22"
+                    android:color="#67C8FF"/>
+
+                <item
+                    android:offset="0.48"
+                    android:color="#2896F3"/>
+
+                <item
+                    android:offset="0.76"
+                    android:color="#1565C0"/>
+
+                <item
+                    android:offset="1"
+                    android:color="#0B3C91"/>
+
+            </gradient>
+        </aapt:attr>
+
+    </path>
+
+    <!-- Глубина океана -->
+    <path
+        android:pathData="M54,24
+                          C37.43,24 24,37.43 24,54
+                          C24,70.57 37.43,84 54,84
+                          C70.57,84 84,70.57 84,54
+                          C84,37.43 70.57,24 54,24Z">
+
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="20"
+                android:startY="20"
+                android:endX="88"
+                android:endY="88">
+
+                <item
+                    android:offset="0"
+                    android:color="#00000000"/>
+
+                <item
+                    android:offset="0.55"
+                    android:color="#00000000"/>
+
+                <item
+                    android:offset="1"
+                    android:color="#66032654"/>
+
+            </gradient>
+        </aapt:attr>
+
+    </path>
+
+    <!-- Светлая кайма -->
+    <path
+        android:pathData="M54,24
+                          C37.43,24 24,37.43 24,54
+                          C24,70.57 37.43,84 54,84
+                          C70.57,84 84,70.57 84,54
+                          C84,37.43 70.57,24 54,24Z"
+        android:strokeWidth="1.3"
+        android:strokeColor="#BBE8FF"
+        android:strokeAlpha="0.40"
+        android:fillColor="#00000000"/>
+
+    <!-- Большой блик -->
+    <path
+        android:pathData="M34,29
+                          C39,24
+                          47,22
+                          54,24
+                          C48,28
+                          42,34
+                          39,42
+                          C38,45
+                          36,46
+                          33,45
+                          C30,42
+                          30,35
+                          34,29Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.32"/>
+
+    <!-- Малый блик -->
+    <path
+        android:pathData="M44,30
+                          C47,28
+                          51,29
+                          53,31
+                          C51,32
+                          48,34
+                          46,37
+                          C44,36
+                          43,33
+                          44,30Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.18"/>    <!-- Северная Америка -->
+    <path
+        android:pathData="
+        M31,37
+        C33,34 37,32 42,31
+        C46,30 50,31 52,34
+        C53,36 52,39 50,40
+        C48,41 47,43 46,45
+        C45,47 43,49 41,49
+        C39,50 37,52 36,54
+        C35,56 34,58 32,58
+        C30,57 29,55 29,52
+        C28,48 29,43 31,37Z"
+        android:fillColor="#79D45A"/>
+
+    <!-- Тень Северной Америки -->
+    <path
+        android:pathData="
+        M39,33
+        C43,33 47,35 49,38
+        C46,39 44,41 43,44
+        C42,47 40,49 37,50
+        C39,46 40,41 39,33Z"
+        android:fillColor="#4CAF50"
+        android:fillAlpha="0.35"/>
+
+    <!-- Центральная Америка -->
+    <path
+        android:pathData="
+        M44,50
+        C46,50 47,51 48,52
+        C48,53 47,54 46,55
+        C45,56 45,57 46,58
+        C45,59 44,60 43,60
+        C42,59 42,57 42,55
+        C42,53 43,51 44,50Z"
+        android:fillColor="#6CC04A"/>
+
+    <!-- Южная Америка -->
+    <path
+        android:pathData="
+        M45,58
+        C48,59 51,61 52,64
+        C53,67 52,71 50,75
+        C49,78 47,81 45,83
+        C43,82 42,79 42,76
+        C41,72 40,69 40,65
+        C40,62 42,60 45,58Z"
+        android:fillColor="#69C44B"/>
+
+    <!-- Тень Южной Америки -->
+    <path
+        android:pathData="
+        M47,61
+        C49,64 50,67 49,71
+        C48,75 46,78 44,80
+        C45,74 45,67 47,61Z"
+        android:fillColor="#388E3C"
+        android:fillAlpha="0.28"/>
+
+    <!-- Гренландия -->
+    <path
+        android:pathData="
+        M48,28
+        C50,27 52,28 53,30
+        C53,32 52,34 50,34
+        C48,34 47,32 47,30
+        C47,29 47.5,28.3 48,28Z"
+        android:fillColor="#82DB65"/>
+
+    <!-- Блики на материках -->
+    <path
+        android:pathData="
+        M33,36
+        C36,34 41,34 45,36
+        C42,37 39,39 37,42
+        C35,41 33,39 33,36Z"
+        android:fillColor="#C8F7B8"
+        android:fillAlpha="0.35"/>
+
+    <path
+        android:pathData="
+        M44,60
+        C46,61 48,63 48,66
+        C47,65 45,65 44,64
+        C43,63 43,61 44,60Z"
+        android:fillColor="#C8F7B8"
+        android:fillAlpha="0.30"/>    <!-- Европа -->
+    <path
+        android:pathData="
+        M56,31
+        C59,30 63,31 65,33
+        C67,35 67,38 65,39
+        C63,40 61,39 59,38
+        C57,37 56,35 55,33
+        C55,32 55.5,31.3 56,31Z"
+        android:fillColor="#7ED957"/>
+
+    <!-- Африка -->
+    <path
+        android:pathData="
+        M57,39
+        C60,39 64,41 66,45
+        C68,49 68,54 66,58
+        C64,62 61,65 58,67
+        C56,66 55,63 55,60
+        C54,56 53,52 53,48
+        C53,44 54,41 57,39Z"
+        android:fillColor="#66C74A"/>
+
+    <!-- Тень Африки -->
+    <path
+        android:pathData="
+        M61,42
+        C64,46 64,52 62,58
+        C61,61 60,63 58,65
+        C59,58 59,50 61,42Z"
+        android:fillColor="#388E3C"
+        android:fillAlpha="0.28"/>
+
+    <!-- Азия -->
+    <path
+        android:pathData="
+        M61,31
+        C66,29 72,30 76,33
+        C79,36 80,41 79,45
+        C78,48 76,50 73,51
+        C71,52 69,51 67,50
+        C65,49 63,49 61,50
+        C59,49 58,47 58,45
+        C58,42 59,38 60,35
+        C60,33 60.5,32 61,31Z"
+        android:fillColor="#7FD95C"/>
+
+    <!-- Восточная Азия -->
+    <path
+        android:pathData="
+        M72,47
+        C74,47 76,48 77,50
+        C77,52 76,54 74,55
+        C72,55 70,54 70,52
+        C70,49 71,48 72,47Z"
+        android:fillColor="#6BC84B"/>
+
+    <!-- Индия -->
+    <path
+        android:pathData="
+        M63,48
+        C64,49 65,50 65,52
+        C64,54 63,55 62,56
+        C61,54 61,52 61,50
+        C61,49 62,48.5 63,48Z"
+        android:fillColor="#5FBF44"/>
+
+    <!-- Австралия -->
+    <path
+        android:pathData="
+        M67,67
+        C70,66 74,67 76,69
+        C77,71 76,74 73,75
+        C70,76 67,75 65,73
+        C65,70 66,68 67,67Z"
+        android:fillColor="#69C84D"/>
+
+    <!-- Мадагаскар -->
+    <path
+        android:pathData="
+        M63,66
+        C64,66 65,67 65,69
+        C65,71 64,72 63,72
+        C62,71 62,69 62,68
+        C62,67 62.5,66.3 63,66Z"
+        android:fillColor="#73D553"/>
+
+    <!-- Япония -->
+    <path
+        android:pathData="
+        M78,47
+        C79,47 80,48 80,49
+        C80,50 79,51 78,52
+        C77,51 77,50 77,49
+        C77,48 77.5,47.3 78,47Z"
+        android:fillColor="#8BEA67"/>
+
+    <!-- Свет на Евразии -->
+    <path
+        android:pathData="
+        M59,33
+        C65,32 71,34 74,37
+        C70,37 66,39 63,42
+        C61,40 59,37 59,33Z"
+        android:fillColor="#D8FFC8"
+        android:fillAlpha="0.30"/>    <!-- Облако 1 -->
+    <path
+        android:pathData="
+        M39,35
+        C42,33 46,34 48,36
+        C50,35 53,36 54,39
+        C54,42 52,44 49,44
+        C47,46 43,46 40,45
+        C37,44 36,41 37,38
+        C37,36.5 38,35.5 39,35Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.22"/>
+
+    <!-- Облако 2 -->
+    <path
+        android:pathData="
+        M60,58
+        C63,56 67,57 69,59
+        C72,58 75,60 75,63
+        C75,66 72,68 69,68
+        C67,70 63,70 60,69
+        C57,68 56,65 57,62
+        C57,60.5 58,59 60,58Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.20"/>
+
+    <!-- Экватор -->
+    <path
+        android:pathData="
+        M24,54
+        C34,58 44,60 54,60
+        C64,60 74,58 84,54"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.2"
+        android:strokeAlpha="0.28"
+        android:fillColor="#00000000"/>
+
+    <!-- Северная параллель -->
+    <path
+        android:pathData="
+        M28,42
+        C37,45 46,46.5 54,46.5
+        C62,46.5 71,45 80,42"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="0.9"
+        android:strokeAlpha="0.18"
+        android:fillColor="#00000000"/>
+
+    <!-- Южная параллель -->
+    <path
+        android:pathData="
+        M28,66
+        C37,63 46,61.5 54,61.5
+        C62,61.5 71,63 80,66"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="0.9"
+        android:strokeAlpha="0.18"
+        android:fillColor="#00000000"/>
+
+    <!-- Левый меридиан -->
+    <path
+        android:pathData="
+        M54,24
+        C46,32 42,43 42,54
+        C42,65 46,76 54,84"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1"
+        android:strokeAlpha="0.22"
+        android:fillColor="#00000000"/>
+
+    <!-- Правый меридиан -->
+    <path
+        android:pathData="
+        M54,24
+        C62,32 66,43 66,54
+        C66,65 62,76 54,84"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1"
+        android:strokeAlpha="0.22"
+        android:fillColor="#00000000"/>
+
+    <!-- Терминатор (тень ночной стороны) -->
+    <path
+        android:pathData="
+        M54,24
+        C37.4,24 24,37.4 24,54
+        C24,70.6 37.4,84 54,84
+        C70.6,84 84,70.6 84,54
+        C84,37.4 70.6,24 54,24Z">
+
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="28"
+                android:startY="24"
+                android:endX="86"
+                android:endY="84">
+
+                <item
+                    android:offset="0"
+                    android:color="#00000000"/>
+
+                <item
+                    android:offset="0.55"
+                    android:color="#00000000"/>
+
+                <item
+                    android:offset="1"
+                    android:color="#70001535"/>
+
+            </gradient>
+        </aapt:attr>
+
+    </path>
+
+    <!-- Большой стеклянный блик -->
+    <path
+        android:pathData="
+        M33,28
+        C39,22 49,21 57,25
+        C49,29 43,36 40,45
+        C39,48 37,49 34,48
+        C30,45 29,35 33,28Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.18"/>
+
+    <!-- Яркая точка блика -->
+  <!-- Маленький блик -->
+<path
+    android:pathData="
+        M44,31
+        C45.4,31 46.5,32.1 46.5,33.5
+        C46.5,34.9 45.4,36 44,36
+        C42.6,36 41.5,34.9 41.5,33.5
+        C41.5,32.1 42.6,31 44,31Z"
+    android:fillColor="#FFFFFF"
+    android:fillAlpha="0.45"/>
+
+</vector>
